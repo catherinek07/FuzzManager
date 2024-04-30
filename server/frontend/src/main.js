@@ -5,6 +5,10 @@ import router from "./router.js";
 import ActivityGraph from "./components/ActivityGraph.vue";
 import AssignBtn from "./components/Signatures/AssignBtn.vue";
 import BugPublicationForm from "./components/Bugs/PublicationForm.vue";
+import CollectionsBrowse from "./components/Collections/Browse.vue";
+import CollectionsList from "./components/Collections/List.vue";
+import CollectionsPatch from "./components/Collections/Patch.vue";
+import CollectionsReport from "./components/Collections/Report.vue";
 import CommentPublicationForm from "./components/Bugs/Comments/PublicationForm.vue";
 import CrashesList from "./components/Crashes/List.vue";
 import CrashStats from "./components/CrashStats.vue";
@@ -15,11 +19,15 @@ import Inbox from "./components/Notifications/Inbox.vue";
 import PoolView from "./components/Pools/View.vue";
 import PoolsList from "./components/Pools/List.vue";
 import ProviderKey from "./components/ProviderKey.vue";
+import ReportConfigurationsList from "./components/ReportConfigurations/List.vue";
+import ReportConfigurationsSummary from "./components/ReportConfigurations/Summary.vue";
 import SignatureView from "./components/Signatures/View.vue";
 import SignaturesList from "./components/Signatures/List.vue";
 
 import "vue-popperjs/dist/vue-popper.css";
 
+Vue.config.productionTip = false;
+Vue.config.devtools = true;
 Vue.use(VueRouter);
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -29,6 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
       activitygraph: ActivityGraph,
       assignbutton: AssignBtn,
       bugpublicationform: BugPublicationForm,
+      collectionsbrowse: CollectionsBrowse,
+      collectionslist: CollectionsList,
+      collectionspatch: CollectionsPatch,
+      collectionsreport: CollectionsReport,
       commentpublicationform: CommentPublicationForm,
       crasheslist: CrashesList,
       crashstats: CrashStats,
@@ -39,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
       poolview: PoolView,
       ppcselect: FullPPCSelect,
       providerkey: ProviderKey,
+      reportconfigurationslist: ReportConfigurationsList,
+      reportconfigurationssummary: ReportConfigurationsSummary,
       signatureslist: SignaturesList,
       signatureview: SignatureView,
     },
